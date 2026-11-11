@@ -1,0 +1,8 @@
+# Arquivos executaveis
+*.exe
+
+# Arquivos objeto
+*.o
+
+# Arquivos temporarios
+*.tmp
