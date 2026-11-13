@@ -2,123 +2,124 @@
 
 ## Sistema de Planejamento e Acompanhamento de Ações de Saúde na Escola
 
-Projeto acadêmico desenvolvido no curso de Bacharelado em Engenharia de Software da UniCesumar, com foco no desenvolvimento de uma aplicação em linguagem C para auxiliar no planejamento, registro e acompanhamento de ações coletivas do Programa Saúde na Escola (PSE).
+Projeto acadêmico desenvolvido no curso de Bacharelado em Engenharia de Software da UniCesumar, em 2026. O projeto consiste em uma aplicação desenvolvida em linguagem C para auxiliar no planejamento, registro e acompanhamento de ações coletivas do Programa Saúde na Escola (PSE).
 
 ## Sobre o projeto
 
-O **PSE em Ação** é uma aplicação executada em ambiente de terminal, desenvolvida em linguagem C, que tem como objetivo auxiliar equipes escolares e de saúde na organização das ações coletivas realizadas no contexto do Programa Saúde na Escola.
+O PSE em Ação é uma aplicação executada em ambiente de terminal, desenvolvida em linguagem C. Seu objetivo é auxiliar profissionais das áreas de saúde e educação na organização e no acompanhamento de ações coletivas realizadas no ambiente escolar.
 
-A aplicação utiliza dados fictícios e informações coletivas, não realizando o armazenamento de dados pessoais, diagnósticos ou informações clínicas individuais dos estudantes.
-
-## Problema
-
-A organização das ações do Programa Saúde na Escola pode envolver diferentes informações relacionadas ao planejamento e acompanhamento das atividades. Quando essas informações estão distribuídas em diferentes registros, pode haver dificuldades para consultar, atualizar e acompanhar as ações realizadas.
-
-O projeto propõe uma aplicação simples para centralizar essas informações e facilitar seu gerenciamento.
-
-## Objetivo
-
-Desenvolver uma aplicação em linguagem C capaz de auxiliar uma equipe escolar e de saúde no planejamento, registro e acompanhamento de ações coletivas do Programa Saúde na Escola, apresentando informações claras e preservando a privacidade dos estudantes.
+O sistema utiliza dados fictícios e informações coletivas, sem finalidade de registrar informações pessoais ou clínicas individuais dos estudantes.
 
 ## Funcionalidades
 
-O sistema prevê as seguintes funcionalidades:
+O sistema disponibiliza as seguintes funcionalidades:
 
-* Cadastro de ações do PSE;
-* Listagem das ações cadastradas;
-* Pesquisa de ações por código, escola ou temática;
-* Atualização da situação das ações;
-* Registro da quantidade efetiva de participantes em ações concluídas;
-* Geração de resumo geral das ações;
-* Validação de informações importantes, como códigos duplicados e quantidades inválidas.
+- Cadastro de ações do Programa Saúde na Escola;
+- Listagem das ações cadastradas;
+- Pesquisa de ações por código, escola ou temática;
+- Atualização da situação das ações;
+- Registro da quantidade efetiva de participantes em ações realizadas;
+- Geração de resumo geral das ações;
+- Validação de entradas, códigos duplicados, campos obrigatórios, datas e quantidades.
 
-## Temáticas
+As ações podem apresentar três situações: Planejada, Realizada ou Cancelada.
 
-Para a demonstração do sistema, serão utilizadas principalmente as temáticas:
+## Tecnologias utilizadas
 
-* Alimentação saudável;
-* Atividade física.
+- Linguagem C;
+- Compilador GCC;
+- Execução em ambiente de terminal;
+- Estruturas de dados e arrays;
+- Funções, estruturas condicionais e estruturas de repetição.
 
-A estrutura da aplicação é genérica e pode contemplar outras ações relacionadas ao Programa Saúde na Escola.
+## Como executar
 
-## Privacidade e limites
+### 1. Obter o código-fonte
 
-O sistema utiliza exclusivamente dados fictícios e informações coletivas.
+Clone o repositório:
 
-Não fazem parte do sistema:
+```bash
+git clone https://github.com/FelipeInacioMartins/PSE---em---Acao.git
+```
 
-* Nomes de estudantes;
-* Diagnósticos;
-* Prontuários;
-* Condições clínicas individuais;
-* Outras informações pessoais sensíveis;
-* Diagnóstico ou triagem;
-* Prescrição ou tratamento de condições de saúde.
+Entre na pasta do projeto:
 
-O objetivo da aplicação é exclusivamente apoiar a organização e o acompanhamento de ações coletivas do PSE.
+```bash
+cd PSE---em---Acao
+```
 
-## Tecnologias
+### 2. Compilar
 
-* Linguagem C;
-* Execução em ambiente de terminal;
-* Armazenamento em memória;
-* Estruturas de dados básicas da linguagem C;
-* Funções, condicionais, loops e arrays.
+Com o GCC instalado, execute:
+
+```bash
+gcc src/pse_em_acao.c -o pse_em_acao -Wall -Wextra -std=c11
+```
+
+### 3. Executar
+
+No Windows (PowerShell):
+
+```powershell
+.\pse_em_acao.exe
+```
+
+No Linux:
+
+```bash
+./pse_em_acao
+```
+
+Após a execução, o menu principal será apresentado no terminal.
+
+## Armazenamento e limitações
+
+Os registros são armazenados temporariamente na memória do programa e são perdidos quando a aplicação é encerrada.
+
+O sistema não possui interface gráfica, armazenamento permanente, edição ou exclusão de registros.
 
 ## Estrutura do projeto
 
-A estrutura prevista para o repositório é:
-
 ```text
-PSE-em-Acao/
+PSE---em---Acao/
+├── .gitignore
 ├── README.md
 ├── src/
 │   └── pse_em_acao.c
 └── docs/
-    └── AEP - SEGUDO SEMESTRE.pdf
+    ├── AEP - SEGUNDO SEMESTRE.pdf
+    ├── README.md
+    └── testes.md
 ```
 
 ## Documentação
 
-A documentação acadêmica do projeto contém:
+Os materiais complementares do projeto estão disponíveis na pasta `docs`:
 
-* Contextualização do problema;
-* Objetivos;
-* Justificativa;
-* Caracterização da solução;
-* Requisitos funcionais e não funcionais;
-* Fluxogramas;
-* Pseudocódigos;
-* Processo de desenvolvimento;
-* Planejamento das sprints;
-* Considerações finais.
+- [Documento acadêmico da AEP (PDF)](docs/AEP%20-%20SEGUNDO%20SEMESTRE.pdf)
+- [Documentação complementar](docs/README.md)
+- [Registro dos testes](docs/testes.md)
 
-## Processo de desenvolvimento
+## Apresentação em vídeo
 
-O desenvolvimento será realizado de forma incremental, seguindo etapas de:
+O vídeo demonstrativo apresenta o contexto do projeto, seus objetivos, os conceitos de Engenharia de Software utilizados e uma demonstração prática das funcionalidades implementadas.
 
-**Requisitos → Modelagem → Algoritmos → Implementação → Testes → Documentação → Entrega**
-
-O projeto está organizado em sprints, contemplando desde o levantamento dos requisitos até os testes, documentação e preparação da apresentação.
+[Assistir à apresentação do PSE em Ação no YouTube](https://youtu.be/BX5lWmM3Lj0)
 
 ## Integrantes
 
-* Felipe Inácio Martins
-* Alexia Maria da Silva Panaro
-* Emanuel Lazarin Paião
+- Felipe Inácio Martins
+- Alexia Maria da Silva Panaro
+- Emanuel Lazarin Paião
 
 ## Instituição
 
 **UniCesumar — Centro Universitário de Maringá**
 
-**Curso:** Bacharelado em Engenharia de Software
+Curso: Bacharelado em Engenharia de Software
 
-**Ano:** 2026
+Ano: 2026
 
 ## Status do projeto
 
-Em desenvolvimento.
-
-## Repositório
-
-Este repositório contém os arquivos relacionados ao desenvolvimento acadêmico do projeto **PSE em Ação**.
+Projeto acadêmico concluído.
